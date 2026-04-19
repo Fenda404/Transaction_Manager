@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "oSYg1P9dhgA=",
+  "success": true,
+  "projectFilePath": "E:\\Git_clone_Project\\PhatDat_FoodStore\\PhatDat_FoodStore\\PhatDat_FoodStore.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\TAN DAT\\.nuget\\packages\\dapper\\2.1.72\\dapper.2.1.72.nupkg.sha512",
+    "C:\\Users\\TAN DAT\\.nuget\\packages\\materialdesigncolors\\5.3.1\\materialdesigncolors.5.3.1.nupkg.sha512",
+    "C:\\Users\\TAN DAT\\.nuget\\packages\\materialdesignthemes\\5.3.1\\materialdesignthemes.5.3.1.nupkg.sha512",
+    "C:\\Users\\TAN DAT\\.nuget\\packages\\microsoft.data.sqlite.core\\10.0.6\\microsoft.data.sqlite.core.10.0.6.nupkg.sha512",
+    "C:\\Users\\TAN DAT\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.77\\microsoft.xaml.behaviors.wpf.1.1.77.nupkg.sha512",
+    "C:\\Users\\TAN DAT\\.nuget\\packages\\sourcegear.sqlite3\\3.50.4.2\\sourcegear.sqlite3.3.50.4.2.nupkg.sha512",
+    "C:\\Users\\TAN DAT\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\3.0.2\\sqlitepclraw.bundle_e_sqlite3.3.0.2.nupkg.sha512",
+    "C:\\Users\\TAN DAT\\.nuget\\packages\\sqlitepclraw.config.e_sqlite3\\3.0.2\\sqlitepclraw.config.e_sqlite3.3.0.2.nupkg.sha512",
+    "C:\\Users\\TAN DAT\\.nuget\\packages\\sqlitepclraw.core\\3.0.2\\sqlitepclraw.core.3.0.2.nupkg.sha512",
+    "C:\\Users\\TAN DAT\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\3.0.2\\sqlitepclraw.provider.e_sqlite3.3.0.2.nupkg.sha512",
+    "C:\\Users\\TAN DAT\\.nuget\\packages\\system.data.sqlite\\2.0.3\\system.data.sqlite.2.0.3.nupkg.sha512",
+    "C:\\Users\\TAN DAT\\.nuget\\packages\\system.memory\\4.6.3\\system.memory.4.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}

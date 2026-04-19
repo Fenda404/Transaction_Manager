@@ -1,0 +1,147 @@
+﻿<Window x:Class="PhatDat_FoodStore.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:PhatDat_FoodStore.ViewModels"
+        xmlns:uc="clr-namespace:PhatDat_FoodStore.Views.UserControls"
+        Icon="/Resources/Images/Fenda_logo_2_removed.ico"
+        Height="720"
+        Width="1280"
+        Title="Trang chính"
+        WindowStartupLocation="CenterScreen">
+
+
+    <Window.DataContext>
+        <vm:MainViewModel />
+    </Window.DataContext>
+
+
+    <!--<Window.Resources>
+
+        <DataTemplate DataType="{x:Type uc:Dashboard_UC}">
+            <uc:Dasboard_UC/>
+        </DataTemplate>
+
+        </DataTemplate>
+    </Window.Resources>-->
+    <Grid>
+        <!-- Phần hình nền-->
+        <Image Source="/Resources/Images/Pixel_BG_1.png"
+               Stretch="UniformToFill">
+            <Image.Effect>
+                <BlurEffect Radius="20" />
+            </Image.Effect>
+        </Image>
+        <Rectangle Fill="Black"
+                   Opacity="0.5" />
+
+        <!-- Phần Grid chính-->
+        <Grid Margin="25">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="280" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+
+            <!-- Phần Sidebar -->
+            <Border Grid.Column="0"
+                    Style="{DynamicResource BorderSidebarStyle}"
+                    Margin="0,0,15,0">
+                <Border Style="{StaticResource SidebarContainerStyle}">
+                    <Grid>
+                        <!--Grid phần Sidebar-->
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Hiển thị username -->
+                        <Border Grid.Row="0"
+                                Grid.Column="0"
+                                BorderBrush="White"
+                                BorderThickness="2"
+                                CornerRadius="200"
+                                Width="70"
+                                Height="70"
+                                Opacity="0.7"
+                                Background="#1AFFFFFF">
+                            <TextBlock Text="&#xE77B;"
+                                       FontFamily="Segoe MDL2 Assets"
+                                       FontSize="50"
+                                       Background="Transparent"
+                                       Foreground="White"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center" />
+                        </Border>
+                        <TextBlock Grid.Row="0"
+                                   Grid.Column="1"
+                                   Text="{Binding GetUsername, UpdateSourceTrigger=PropertyChanged}"
+                                   Foreground="SkyBlue"
+                                   Background="Transparent"
+                                   FontSize="24"
+                                   VerticalAlignment="Center"
+                                   Opacity="0.7"/>
+
+                        <!-- Tổng quan -->
+                        <Button Style="{StaticResource SidebarButtonStyle}"
+                                Content="DASHBOARD"
+                                Grid.Row="1"
+                                Grid.ColumnSpan="2" />
+                        <!-- Giao dịch -->
+                        <Button Style="{StaticResource SidebarButtonStyle}"
+                                Content="TRANSACTIONS"
+                                Grid.Row="2"
+                                Grid.ColumnSpan="2" />
+                        <!-- Báo cáo -->
+                        <Button Style="{StaticResource SidebarButtonStyle}"
+                                Content="REPORTS"
+                                Grid.Row="3"
+                                Grid.ColumnSpan="2" />
+
+                        <!-- Ngân sách -->
+                        <Button Style="{StaticResource SidebarButtonStyle}"
+                                Content="BUDGETS"
+                                Grid.Row="4"
+                                Grid.ColumnSpan="2" />
+
+                        <!--Cài đặt-->
+                        <Button Style="{StaticResource SidebarButtonStyle}"
+                                Content="SETTINGS"
+                                Grid.Row="5"
+                                Grid.ColumnSpan="2" />
+
+                        <!-- Đăng xuất -->
+                        <Button Style="{StaticResource SidebarButtonStyle}"
+                                Content="SIGN OUT"
+                                Grid.Row="6"
+                                Grid.ColumnSpan="2"
+                                Command="{Binding SignOutCommand}" />
+
+
+                    </Grid>
+                </Border>
+            </Border>
+
+            <!-- Phần MainContainer -->
+            <Border Grid.Column="1"
+                    Style="{DynamicResource BorderContainerStyle}">
+                <Border Style="{StaticResource MainContainerStyle}">
+                    <Grid>
+                        <ContentControl x:Name="MainContentContainer" />
+                        <uc:Dashboard_UC x:Name="DashboardControl" />
+
+                    </Grid>
+                </Border>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
